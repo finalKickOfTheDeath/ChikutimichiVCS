@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Chapitre {
 	
-	private int nombrePage;
-	private Etape etape;
 	private List<Planche> planches;
 	
 	public Chapitre() {
