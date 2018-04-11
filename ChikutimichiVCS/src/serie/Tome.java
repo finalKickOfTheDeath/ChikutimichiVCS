@@ -9,7 +9,8 @@ public class Tome {
 	private List<Chapitre> chapitres;
 	private List<Illustration> illustrations;
 	
-	public Tome() {
+	public Tome(String titre) {
+		this.titre = titre;
 		chapitres = new ArrayList<Chapitre>();
 		illustrations = new ArrayList<Illustration>();
 	}

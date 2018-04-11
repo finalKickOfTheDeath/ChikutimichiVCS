@@ -1,9 +1,8 @@
 package application;
 
-import builder.BuidlerMangaQuebec;
-import builder.Builder;
-import builder.BuilderMangaEtranger;
-import builder.Workspace;
+import builder.ProjetBuilderQuebec;
+import builder.ProjetBuilderJapon;
+import builder.ProjetDirector;
 import planche.PlancheCorrigee;
 import planche.Planche;
 import planche.PlancheOriginale;
@@ -24,19 +23,26 @@ public class Application {
 		System.out.println("///////////////////////////////////////////////////\n");
 		
 		
-		Builder builderMangaEtranger = new BuilderMangaEtranger();
-		Builder builderMangaQuebec = new BuidlerMangaQuebec();
+		Projet projetMaidSama = new ProjetDirector(new ProjetBuilderJapon()).setTitre("Maid Sama!").build();
 		
-		@SuppressWarnings("unused")
-		Projet maidSamaProjet = new Workspace().construire(builderMangaEtranger, "Maid Sama!");
-		System.out.println();
+		System.out.println("Projet " + projetMaidSama.getTitre() + " créé avec succès");
+		System.out.println("Equipe composée de " + projetMaidSama.getEquipe().getPersonnes().size() + " personnes");
+		System.out.println("Actuellement " + projetMaidSama.getTomes().size() + " tomes en cours d'édition\n");
 		
-		@SuppressWarnings("unused")
-		Projet headHockeyProjet = new Workspace().construire(builderMangaQuebec, "Head Hockey");
-		System.out.println();
 		
-		@SuppressWarnings("unused")
-		Projet idolish7Projet = new Workspace().construire(builderMangaEtranger, "Idolish7");
+		Projet projetWebFic = new ProjetDirector(new ProjetBuilderQuebec()).setTitre("WebFic").build();
+		
+		System.out.println("Projet " + projetWebFic.getTitre() + " créé avec succès");
+		System.out.println("Equipe composée de " + projetWebFic.getEquipe().getPersonnes().size() + " personnes");
+		System.out.println("Actuellement " + projetWebFic.getTomes().size() + " tomes en cours d'édition\n");
+		
+		
+		Projet projetIdolish = new ProjetDirector(new ProjetBuilderJapon()).setTitre("Idolish7").build();
+		
+		System.out.println("Projet " + projetIdolish.getTitre() + " créé avec succès");
+		System.out.println("Equipe composée de " + projetIdolish.getEquipe().getPersonnes().size() + " personnes");
+		System.out.println("Actuellement " + projetIdolish.getTomes().size() + " tomes en cours d'édition\n");
+		
 		
 		System.out.println("\n\n\n");
 		

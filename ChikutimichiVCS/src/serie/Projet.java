@@ -12,21 +12,12 @@ public class Projet {
 	private Equipe equipe;
 	
 	public Projet(String titre) {
-		this.titre = titre;
-		this.tomes = new ArrayList<Tome>();
-		this.equipe = new Equipe();
-		/*DEBUG*/
-		System.out.println("Nouveau projet " + getTitre() + " créé");
-	}
-
-	public void ajouterTome(Tome tome) {
-		tomes.add(tome);
-		/*DEBUG*/
-		System.out.println("Tome ajouté à la série");
+		this.setTitre(titre);
+		tomes = new ArrayList<Tome>();
 	}
 	
-	public Equipe getEquipe() {
-		return equipe;
+	public void ajouterTome(Tome tome) {
+		tomes.add(tome);
 	}
 
 	public String getTitre() {
@@ -35,6 +26,18 @@ public class Projet {
 
 	public void setTitre(String titre) {
 		this.titre = titre;
+	}
+	
+	public List<Tome> getTomes() {
+		return tomes;
+	}
+
+	public Equipe getEquipe() {
+		return equipe;
+	}
+
+	public void setEquipe(Equipe equipe) {
+		this.equipe = equipe;
 	}
 
 }
