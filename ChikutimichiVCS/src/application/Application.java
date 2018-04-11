@@ -27,12 +27,15 @@ public class Application {
 		Builder builderMangaEtranger = new BuilderMangaEtranger();
 		Builder builderMangaQuebec = new BuidlerMangaQuebec();
 		
+		@SuppressWarnings("unused")
 		Projet maidSamaProjet = new Workspace().construire(builderMangaEtranger, "Maid Sama!");
 		System.out.println();
 		
+		@SuppressWarnings("unused")
 		Projet headHockeyProjet = new Workspace().construire(builderMangaQuebec, "Head Hockey");
 		System.out.println();
 		
+		@SuppressWarnings("unused")
 		Projet idolish7Projet = new Workspace().construire(builderMangaEtranger, "Idolish7");
 		
 		System.out.println("\n\n\n");
