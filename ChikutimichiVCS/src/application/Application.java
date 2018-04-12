@@ -9,6 +9,7 @@ import planche.PlancheOriginale;
 import planche.PlancheRetouchee;
 import planche.PlancheTraduite;
 import serie.Projet;
+import serie.Tome;
 
 public class Application {
 
@@ -41,7 +42,13 @@ public class Application {
 		
 		System.out.println("Projet " + projetIdolish.getTitre() + " créé avec succès");
 		System.out.println("Equipe composée de " + projetIdolish.getEquipe().getPersonnes().size() + " personnes");
-		System.out.println("Actuellement " + projetIdolish.getTomes().size() + " tomes en cours d'édition\n");
+		projetIdolish.ajouterTome(new Tome("Monster Generation"));
+		projetIdolish.ajouterTome(new Tome("Trigger"));
+		projetIdolish.ajouterTome(new Tome("Riku et Tenn"));
+		System.out.println("Actuellement " + projetIdolish.getTomes().size() + " tomes en cours d'édition :");
+		for(int i = 0; i < projetIdolish.getTomes().size(); i++) {
+			System.out.println("Tome " + (i + 1) + ": " + projetIdolish.getTomes().get(i).getTitre());
+		}
 		
 		
 		System.out.println("\n\n\n");
