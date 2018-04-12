@@ -4,8 +4,6 @@ import serie.Projet;
 
 public abstract class ProjetBuilder {
 	
-	public ProjetBuilder() {}
-	
 	public abstract Projet creerProjet(String titre);
 	
 	public abstract void creerTome(Projet projet);

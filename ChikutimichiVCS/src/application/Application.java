@@ -2,8 +2,6 @@ package application;
 
 import builder.ProjetBuilderQuebec;
 
-import java.util.Iterator;
-
 import builder.ProjetBuilderJapon;
 import builder.ProjetDirector;
 import planche.PlancheCorrigee;
@@ -34,11 +32,12 @@ public class Application {
 		System.out.println("Actuellement " + projetMaidSama.getTomes().size() + " tomes en cours d'édition\n");
 		
 		
-		Projet projetWebFic = new ProjetDirector(new ProjetBuilderQuebec()).setTitre("WebFic").build();
+		Projet projetWebFic = new ProjetDirector(new ProjetBuilderQuebec(2)).setTitre("WebFic").build();
 		
 		System.out.println("Projet " + projetWebFic.getTitre() + " créé avec succès");
 		System.out.println("Equipe composée de " + projetWebFic.getEquipe().getPersonnes().size() + " personnes");
-		System.out.println("Actuellement " + projetWebFic.getTomes().size() + " tomes en cours d'édition\n");
+		System.out.println("Actuellement " + projetWebFic.getTomes().size() + " tomes en cours d'édition");
+		System.out.println(projetWebFic.toString());
 		
 		
 		Projet projetIdolish = new ProjetDirector(new ProjetBuilderJapon()).setTitre("Idolish7").build();
@@ -49,16 +48,10 @@ public class Application {
 		projetIdolish.ajouterTome(new Tome("Trigger"));
 		projetIdolish.ajouterTome(new Tome("Riku et Tenn"));
 		System.out.println("Actuellement " + projetIdolish.getTomes().size() + " tomes en cours d'édition :");
-		Iterator<Tome> it = projetIdolish.getTomes().iterator();
-		while(it.hasNext()) {
-			Tome t = it.next();
-			System.out.println("Tome " + t.getNumero() + ": " + t.getTitre());
-		}
-			
-		
-		
+		System.out.println(projetIdolish.toString());
 		
 		System.out.println("\n\n\n");
+		
 		
 		/*
 		 * Decorator
