@@ -1,6 +1,9 @@
 package application;
 
 import builder.ProjetBuilderQuebec;
+
+import java.util.Iterator;
+
 import builder.ProjetBuilderJapon;
 import builder.ProjetDirector;
 import planche.PlancheCorrigee;
@@ -46,9 +49,13 @@ public class Application {
 		projetIdolish.ajouterTome(new Tome("Trigger"));
 		projetIdolish.ajouterTome(new Tome("Riku et Tenn"));
 		System.out.println("Actuellement " + projetIdolish.getTomes().size() + " tomes en cours d'édition :");
-		for(int i = 0; i < projetIdolish.getTomes().size(); i++) {
-			System.out.println("Tome " + (i + 1) + ": " + projetIdolish.getTomes().get(i).getTitre());
+		Iterator<Tome> it = projetIdolish.getTomes().iterator();
+		while(it.hasNext()) {
+			Tome t = it.next();
+			System.out.println("Tome " + t.getNumero() + ": " + t.getTitre());
 		}
+			
+		
 		
 		
 		System.out.println("\n\n\n");
