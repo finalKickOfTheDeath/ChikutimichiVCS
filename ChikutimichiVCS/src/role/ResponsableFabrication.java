@@ -1,4 +1,4 @@
-package role;
+package ChikutimichiVCS.src.role;
 
 public class ResponsableFabrication extends Personne {
 	
@@ -6,4 +6,8 @@ public class ResponsableFabrication extends Personne {
 		super();
 	}
 
+	@Override
+	public void traitement(String probleme) {
+
+	}
 }

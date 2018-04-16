@@ -1,9 +1,10 @@
-package role;
+package ChikutimichiVCS.src.role;
 
-public abstract class Personne {
+public abstract class Personne implements Chaine{
 	
 	private static int cpt = 0;
-	
+	protected Personne suceessor;
+
 	private int id;
 	private String nom;
 	
@@ -15,6 +16,11 @@ public abstract class Personne {
 		this();
 		this.setNom(nom);
 	}
+
+    @Override
+    public void SetSuccessor(Personne p) {
+        this.suceessor = p;
+    }
 
 	public String getNom() {
 		return nom;

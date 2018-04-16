@@ -1,4 +1,4 @@
-package role;
+package ChikutimichiVCS.src.role;
 
 public class Traducteur extends Personne {
 	
@@ -6,4 +6,11 @@ public class Traducteur extends Personne {
 		super();
 	}
 
+	@Override
+	public void traitement(String probleme) {
+		if (probleme.equals("non-sens")){
+			System.out.println("Modification de la traduction");
+		}else
+			this.suceessor.traitement(probleme);
+	}
 }

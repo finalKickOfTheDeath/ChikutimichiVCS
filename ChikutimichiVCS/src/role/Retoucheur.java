@@ -1,4 +1,4 @@
-package role;
+package ChikutimichiVCS.src.role;
 
 public class Retoucheur extends Personne {
 	
@@ -6,4 +6,11 @@ public class Retoucheur extends Personne {
 		super();
 	}
 
+	@Override
+	public void traitement(String probleme) {
+		if (probleme.equals("visuel etrange")){
+			System.out.println("Modification des bulles");
+		}else
+			this.suceessor.traitement(probleme);
+	}
 }

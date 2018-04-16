@@ -1,4 +1,4 @@
-package role;
+package ChikutimichiVCS.src.role;
 
 public class Illustrateur extends Personne {
 	
@@ -6,4 +6,11 @@ public class Illustrateur extends Personne {
 		super();
 	}
 
+	@Override
+	public void traitement(String probleme) {
+		if (probleme.equals("Image vide")){
+			System.out.println("Ajout de l'image manquante");
+		}else
+			this.suceessor.traitement(probleme);
+	}
 }
