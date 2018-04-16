@@ -1,4 +1,4 @@
-package ChikutimichiVCS.src.role;
+package role;
 
 public class Retoucheur extends Personne {
 	

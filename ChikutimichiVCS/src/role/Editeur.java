@@ -1,4 +1,4 @@
-package ChikutimichiVCS.src.role;
+package role;
 
 public class Editeur extends Personne {
 	
@@ -8,6 +8,6 @@ public class Editeur extends Personne {
 
 	@Override
 	public void traitement(String probleme) {
-		System.out.println("organisation d'une rÃ©union d'equipe");
+		System.out.println("organisation d'une réunion d'equipe");
 	}
 }

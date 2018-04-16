@@ -1,4 +1,4 @@
-package ChikutimichiVCS.src.role;
+package role;
 
 import java.util.ArrayList;
 import java.util.List;

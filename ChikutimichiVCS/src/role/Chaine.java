@@ -1,4 +1,4 @@
-package ChikutimichiVCS.src.role;
+package role;
 
 public interface Chaine {
 

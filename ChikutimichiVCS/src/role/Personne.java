@@ -1,4 +1,4 @@
-package ChikutimichiVCS.src.role;
+package role;
 
 public abstract class Personne implements Chaine{
 	
