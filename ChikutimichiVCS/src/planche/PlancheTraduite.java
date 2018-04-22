@@ -7,7 +7,7 @@ public class PlancheTraduite extends PlancheDecorator {
 	}
 	
 	@Override
-	public void state(){
+	public void state() {
 		super.state();
 		System.out.print(", Traduite");
 	}

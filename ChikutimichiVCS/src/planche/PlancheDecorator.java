@@ -9,14 +9,8 @@ public class PlancheDecorator implements Planche {
 	}
 	
 	@Override
-	public void state(){
+	public void state() {
 		this.planche.state();
-	}
-
-	@Override
-	public void commenter() {
-		/*DEBUG*/
-		System.out.println("Planche commentée");
 	}
 	
 }

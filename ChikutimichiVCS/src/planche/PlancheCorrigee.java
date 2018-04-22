@@ -7,7 +7,7 @@ public class PlancheCorrigee extends PlancheDecorator {
 	}
 	
 	@Override
-	public void state(){
+	public void state() {
 		super.state();
 		System.out.print(", Corrigée");
 	}
