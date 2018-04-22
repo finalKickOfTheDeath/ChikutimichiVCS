@@ -8,6 +8,6 @@ public class Editeur extends Personne {
 
 	@Override
 	public void traitement(String probleme) {
-		System.out.println("organisation d'une réunion d'equipe");
+		System.out.println("Organisation d'une réunion d'equipe");
 	}
 }

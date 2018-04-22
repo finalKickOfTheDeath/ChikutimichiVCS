@@ -103,7 +103,7 @@ public class Application {
 
 		String prob1 = "page blanche";
 		String prob2 = "non-sens";
-		String prob3 = "Scenario";
+		String prob3 = "scenario";
 		String prob4 = "visuel etrange";
 
 		Bernard.SetSuccessor(Alain);
@@ -112,13 +112,13 @@ public class Application {
 		Veronique.SetSuccessor(Baptiste);
 		Baptiste.SetSuccessor(Alfred);
 
-		System.out.println("le probleme est "+prob1);
+		System.out.println("Le probleme est "+prob1);
 		Bernard.traitement(prob1);
-		System.out.println("le probleme est "+prob2);
+		System.out.println("Le probleme est "+prob2);
 		Bernard.traitement(prob2);
-		System.out.println("le probleme est "+prob3);
+		System.out.println("Le probleme est "+prob3);
 		Bernard.traitement(prob3);
-		System.out.println("le probleme est "+prob4);
+		System.out.println("Le probleme est "+prob4);
 		Veronique.traitement(prob4);
 	}
 
